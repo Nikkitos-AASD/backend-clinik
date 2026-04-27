@@ -17,7 +17,7 @@ DEBUG = os.getenv("DJANGO_DEBUG", "False") == "True"
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "your-backend.onrender.com",  # TODO: поменяй на реальный backend URL
+    "backend-clinik.onrender.com",
 ]
 
 # ========= APPS =========
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    # WhiteNoise (подключим после установки пакета)
+    # WhiteNoise (можно включить позже для статики)
     # "whitenoise.middleware.WhiteNoiseMiddleware",
     "corsheaders.middleware.CorsMiddleware",
     "csp.middleware.CSPMiddleware",
@@ -139,7 +139,7 @@ SIMPLE_JWT = {
 # ========= CORS / CSRF =========
 
 FRONTEND_URL = "https://clinik-1i8i.onrender.com"
-BACKEND_URL = "https://your-backend.onrender.com"  # TODO: поменяй на реальный backend URL
+BACKEND_URL = "https://backend-clinik.onrender.com"
 
 CORS_ALLOWED_ORIGINS = [
     FRONTEND_URL,
